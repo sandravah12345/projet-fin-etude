@@ -11,7 +11,18 @@ controllers:
 # Appelle la page d'accueil
 app_home:
     path: /
-    controller: App\Controller\HomeController
+    controller: App\Controller\HomeController::index
     methods: GET|POST
 
+ # Appelle la page static   
+
+app_legal:
+    path: /mentions
+    controller: App\Controller\PageStaticController::mentionsLegales
+    methods: GET
+
+app_cookies:
+    path: /cookies
+    controller: App\Controller\PageStaticController::politiqueCookies
+    methods: GET
 #--------------------------
